@@ -3,12 +3,12 @@
 import glob, sys, os, shutil
 import fitz
 
-documents = [doc for doc in glob.glob('*.pdf')]
-
-documents_wpw = []
-
 if len(sys.argv) != 2:
     sys.exit("Usage: ./pdfdecrypt.py 'password'")
+
+documents_wpw = []
+    
+documents = [doc for doc in glob.glob('*.pdf')]
     
 for doc in documents:
     if fitz.Document(doc).needsPass:
