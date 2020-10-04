@@ -28,8 +28,3 @@ for name in documents_wpw:
         os.rename(name+"temp",name)
     else:
         print(f'Wrong pw for {name}')
-
-
-
-
-    
